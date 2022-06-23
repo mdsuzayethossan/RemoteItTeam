@@ -1,0 +1,179 @@
+#banner {
+    .banner-item {
+        background-repeat: no-repeat;
+        background-size: cover!important;
+        background-position: center!important;
+        height: 700px;
+        width: 100%;
+        position: relative;
+        z-index: 999;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 9;
+        }
+        .container {
+            position: relative;
+            .banner-content {
+                height: 600px;
+                position: relative;
+                z-index: 99;
+                .banner-text {
+                    h1 {
+                        font-size: 36px;
+                        color: $common_color;
+                        font-weight: 400;
+                        @include for-phone-only {
+                            font-size: 25px;
+                        }
+                        .typed {
+                            font-size: 55px;
+                            color: $main_color;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            padding-bottom: 30px;
+                            @include for-phone-only {
+                                font-size: 40px;
+                            }
+                        }
+                    }
+                    p {
+                        color: $common_color;
+                        font-weight: 400;
+                        line-height: 24px;
+                        padding-bottom: 40px;
+                        text-align: left;
+                    }
+                    a {
+                        @include all-button;
+                        cursor: pointer;
+                        font-size: 18px;
+                        font-weight: 500;
+                        padding: 4px 30px;
+                        @include for-phone-only {
+                            padding: 4px 20px;
+                            font-size: 14px;
+                        }
+                    }
+                    .ancor-2 {
+                        padding: 4px 45px;
+                        @include for-phone-only {
+                            padding: 4px 30px;
+                        }
+                    }
+                }
+            }
+            .banner-right {
+                position: absolute;
+                z-index: 999;
+                right: 0;
+                top: 50%;
+                @include translateY;
+                @include for-phone-only {
+                    position: static;
+                    margin: 100px 0;
+                    top: 0;
+                }
+                @include for-tablet-portrait-up {
+                    position: static;
+                    margin: 300px 0;
+                    top: 0;
+                }
+                i {
+                    background-color: $main_color;
+                    width: 40px;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 22px;
+                    @include border-radius-50;
+                    color: $white;
+                }
+                .logo-scroll-up {
+                    position: absolute;
+                    @include translateX;
+                    top: -60px;
+                }
+                .logo-scroll-down {
+                    position: absolute;
+                    @include translateX;
+                    bottom: -60px;
+                }
+                .banner-section {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*--------- Typed Js -------*/
+
+
+/*Add custom cursor so it auto inherits font styles*/
+
+.typed::after {
+    content: '|';
+    display: inline;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+
+/*Removes cursor that comes with typed.js*/
+
+.typed-cursor {
+    opacity: 0;
+    display: none;
+}
+
+
+/*Custom cursor animation*/
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*--------- Typed Js end -------*/

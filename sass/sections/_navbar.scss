@@ -1,0 +1,202 @@
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .navbar {
+        transition: all linear .4s;
+        -webkit-transition: all linear .4s;
+        -moz-transition: all linear .4s;
+        -ms-transition: all linear .4s;
+        -o-transition: all linear .4s;
+        .container {
+            .navbar-brand {}
+            .navbar-toggler {
+                border: none;
+                padding: 0;
+                outline: none;
+                &:focus {
+                    box-shadow: none;
+                }
+                .hamburger-toggle {
+                    position: relative;
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    z-index: 11;
+                    float: right;
+                    .hamburger {
+                        position: absolute;
+                        transform: translate(-50%, -50%) rotate(0deg);
+                        left: 50%;
+                        top: 50%;
+                        width: 50%;
+                        height: 50%;
+                        pointer-events: none;
+                        span {
+                            width: 100%;
+                            height: 4px;
+                            position: absolute;
+                            background: #333;
+                            border-radius: 2px;
+                            z-index: 1;
+                            transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1.0), all 0.2s ease-in-out;
+                            left: 0px;
+                            z-index: 999;
+                            &:first-child {
+                                top: 10%;
+                                transform-origin: 50% 50%;
+                                transform: translate(0% -50%) !important;
+                            }
+                            &:nth-child(2) {
+                                top: 50%;
+                                transform: translate(0, -50%);
+                            }
+                            &:last-child {
+                                left: 0px;
+                                top: auto;
+                                bottom: 10%;
+                                transform-origin: 50% 50%;
+                            }
+                        }
+                        &.active {
+                            span {
+                                position: absolute;
+                                margin: 0;
+                                &:first-child {
+                                    top: 45%;
+                                    transform: rotate(45deg);
+                                }
+                                &:nth-child(2) {
+                                    left: 50%;
+                                    width: 0px;
+                                }
+                                &:last-child {
+                                    top: 45%;
+                                    transform: rotate(-45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar-collapse {
+                .navbar-nav {
+                    .nav-item {
+                        &:hover {
+                            position: relative;
+                            @include transition;
+                            &::after {
+                                width: 100%;
+                                height: 25px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                content: '';
+                                position: absolute;
+                                background-color: $main_color;
+                                z-index: -1;
+                                -webkit-transform: translateY(-50%);
+                                -moz-transform: translateY(-50%);
+                                -ms-transform: translateY(-50%);
+                                -o-transform: translateY(-50%);
+                                border-radius: 20px;
+                                -webkit-border-radius: 20px;
+                                -moz-border-radius: 20px;
+                                -ms-border-radius: 20px;
+                                -o-border-radius: 20px;
+                                @include for-phone-only {
+                                    border-radius: inherit;
+                                    -webkit-border-radius: inherit;
+                                    -moz-border-radius: inherit;
+                                    -ms-border-radius: inherit;
+                                    -o-border-radius: inherit;
+                                }
+                            }
+                            .nav-link {
+                                color: $white;
+                                @include for-phone-only {
+                                    padding-left: 10px;
+                                }
+                                @include for-tablet-portrait-up {
+                                    padding-left: 10px;
+                                }
+                            }
+                        }
+                        .nav-link {
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            color: $text-color;
+                        }
+                        .dropdown-menu {
+                            li {
+                                .dropdown-item {
+                                    text-transform: uppercase;
+                                    font-weight: 500;
+                                    color: $main_color;
+                                    &:hover {
+                                        background-color: $main_color;
+                                        color: $white;
+                                        text-transform: uppercase;
+                                        font-weight: 500;
+                                    }
+                                    .dropdown-menu {
+                                        &.show {
+                                            -webkit-animation: fadeIn 0.3s alternate;
+                                            /* Safari 4.0 - 8.0 */
+                                            animation: fadeIn 0.3s alternate;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .hire_us {
+                    text-align: right;
+                    ul {
+                        list-style-type: none;
+                        display: flex;
+                        margin-bottom: 0;
+                        @include for-phone-only {
+                            padding-left: 0;
+                        }
+                        li {
+                            margin: 0 5px;
+                            @include for-phone-only {
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+                            }
+                            a {
+                                img {
+                                    width: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .navBackground {
+        background-color: $white;
+        box-shadow: 0 0 60px 0 rgba(0, 0, 0, .07);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        transition: all linear .4s;
+        -webkit-transition: all linear .4s;
+        -moz-transition: all linear .4s;
+        -ms-transition: all linear .4s;
+        -o-transition: all linear .4s;
+        @include for-phone-only {
+            border-bottom: 1px solid $main_color
+        }
+    }

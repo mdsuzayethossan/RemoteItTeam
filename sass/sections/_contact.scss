@@ -1,0 +1,178 @@
+#contact {
+    padding: 100px 0;
+    .container {
+        .contact-container {
+            max-width: 800px;
+            .contact-left-side {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                .contact-left-content {
+                    h5 {}
+                    h2 {
+                        color: $main_color;
+                        font-size: 45px;
+                        font-weight: 600;
+                        padding-right: 80px;
+                    }
+                }
+            }
+            .contact-right-side {
+                h4 {
+                    margin-bottom: 30px;
+                }
+                form {
+                    .form-control {
+                        border-color: $main_color;
+                        &:focus {
+                            color: #212529;
+                            background-color: #fff;
+                            border-color: none;
+                            outline: 0;
+                            box-shadow: none;
+                        }
+                    }
+                    .mb-3 {
+                        .form-select {
+                            border-color: $main_color;
+                            &:focus {
+                                border-color: none;
+                                outline: 0;
+                                box-shadow: none;
+                            }
+                        }
+                        input {}
+                    }
+                    button {
+                        @include all-button;
+                        background-color: $main_color;
+                        font-size: 18px;
+                        color: $white;
+                        font-weight: 500;
+                        i {
+                            font-weight: 500;
+                            color: $white;
+                            margin-left: 7px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .contact-bottom {
+            margin-top: 40px;
+            .email {
+                background-color: $main_color;
+                padding: 10px 20px;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                text-align: center;
+                @include transition;
+                &:hover {
+                    background-color: transparent;
+                    border: 2px solid $main_color;
+                    @include transition;
+                    a {
+                        color: $main_color;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 18px;
+                    @include for-tablet-portrait-up {
+                        font-size: 16px;
+                    }
+                    @include for-tablet-landscape-up {
+                        font-size: 16px;
+                    }
+                    i {
+                        margin-right: 7px;
+                    }
+                }
+                @include for-phone-only {
+                    margin-bottom: 30px;
+                }
+                @include for-tablet-portrait-up {
+                    margin-bottom: 30px;
+                }
+            }
+            .phone {
+                background-color: $main_color;
+                padding: 10px 20px;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                text-align: center;
+                @include transition;
+                &:hover {
+                    background-color: transparent;
+                    border: 2px solid $main_color;
+                    @include transition;
+                    a {
+                        color: $main_color;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 18px;
+                    @include for-tablet-portrait-up {
+                        font-size: 16px;
+                    }
+                    @include for-tablet-landscape-up {
+                        font-size: 16px;
+                    }
+                    i {
+                        margin-right: 7px;
+                    }
+                }
+                @include for-phone-only {
+                    margin-bottom: 30px;
+                }
+                @include for-tablet-portrait-up {
+                    margin-bottom: 30px;
+                }
+            }
+            .address {
+                background-color: $main_color;
+                padding: 10px 20px;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                text-align: center;
+                @include transition;
+                &:hover {
+                    background-color: transparent;
+                    border: 2px solid $main_color;
+                    @include transition;
+                    a {
+                        color: $main_color;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 18px;
+                    @include for-tablet-portrait-up {
+                        font-size: 16px;
+                    }
+                    @include for-tablet-landscape-up {
+                        font-size: 16px;
+                    }
+                    i {
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+    }
+}

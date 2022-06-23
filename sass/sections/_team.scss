@@ -1,0 +1,112 @@
+#team {
+    padding: 100px 0;
+    .container {
+        .team-header {
+            margin-bottom: 40px;
+            h2 {
+                @include main-heading;
+            }
+            h4 {
+                @include sub-heading;
+            }
+        }
+        .single-person {
+            padding: 30px;
+            background-color: #f6f9ff;
+            border-radius: 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            &:hover .full-name {
+                color: #fff;
+            }
+            &:hover .speciality {
+                color: #fff;
+            }
+            &:hover {
+                background-color: $main_color
+            }
+            &:hover .person-image {
+                padding: 12px;
+                border: 4px dashed #fff;
+            }
+            &:hover .person-image .icon {
+                background: none;
+                background-color: #fff;
+                color: $main_color;
+            }
+            .person-image {
+                position: relative;
+                margin-bottom: 50px;
+                border-radius: 50%;
+                border: 4px dashed transparent;
+                transition: padding .3s;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+                .icon {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    text-align: center;
+                    background-color: $main_color;
+                    color: #fff;
+                    border-radius: 50%;
+                    font-size: 24px;
+                    i {}
+                }
+            }
+            .person-info {
+                text-align: center;
+                .full-name {
+                    margin-bottom: 10px;
+                    font-size: 25px;
+                    font-weight: 700;
+                    @include for-desktop-up {
+                        font-size: 21px;
+                    }
+                    .speciality {
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        color: #016cec;
+                    }
+                }
+            }
+            .personal-social {
+                margin-top: 20px;
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    li {
+                        width: 35px;
+                        height: 35px;
+                        line-height: 35px;
+                        margin: 0 5px;
+                        text-align: center;
+                        a {
+                            i {
+                                color: white;
+                            }
+                        }
+                    }
+                    .facebook {
+                        background-color: #4267B2;
+                    }
+                    .twitter {
+                        background-color: #00acee;
+                    }
+                    .linkedin {
+                        background-color: #0072b1;
+                    }
+                    .instagram {
+                        background-color: #FD1D1D;
+                    }
+                }
+            }
+        }
+    }
+}

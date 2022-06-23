@@ -1,0 +1,21 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/media-queries";
+@import "partials/common";
+@import "sections/body";
+@import "sections/header";
+@import "sections/navbar";
+@import "sections/banner";
+@import "sections/about";
+@import "sections/services";
+@import "sections/skills";
+@import "sections/webportfolio";
+@import "sections/logo";
+@import "sections/faq";
+@import "sections/team";
+@import "sections/process";
+@import "sections/contact";
+@import "sections/footer";
+//pages
+@import "sections/website-page";
+@import "sections/logos-page";

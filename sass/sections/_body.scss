@@ -1,0 +1,35 @@
+.banner-social {
+    position: fixed;
+    z-index: 999999;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    @include for-phone-only {
+        right: 0;
+    }
+    @include for-tablet-portrait-up {
+        right: 0;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
+            line-height: 40px;
+            background-color: $main_color;
+            text-align: center;
+            border-radius: 50%!important;
+            -webkit-border-radius: 50%!important;
+            -moz-border-radius: 50%!important;
+            -ms-border-radius: 50%!important;
+            -o-border-radius: 50%!important;
+            a {
+                color: $white;
+            }
+        }
+    }
+}

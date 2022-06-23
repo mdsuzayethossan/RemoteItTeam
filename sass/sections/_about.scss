@@ -1,0 +1,42 @@
+#about {
+    padding: 100px 0;
+    @include for-phone-only {
+        padding: 300px 0;
+    }
+    .container {
+        .about-heading {
+            padding-bottom: 40px;
+            h2 {
+                @include main-heading;
+            }
+            h4 {
+                @include sub-heading;
+            }
+        }
+    }
+    .about-us {
+        @include for-phone-only {
+            margin-top: 30px;
+        }
+        @include for-tablet-portrait-up {
+            margin-top: 30px;
+        }
+        h4 {
+            color: $common_color;
+            font-weight: 400;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $main_color;
+            margin-bottom: 30px;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+        a {
+            @include all-button;
+        }
+    }
+}

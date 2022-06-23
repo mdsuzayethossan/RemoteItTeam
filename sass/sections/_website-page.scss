@@ -1,0 +1,90 @@
+#website {
+    .container {
+        .logo-header {
+            margin-bottom: 40px;
+            h2 {
+                @include main-heading;
+            }
+            h4 {
+                @include sub-heading;
+            }
+        }
+        .logo-tab {
+            margin-bottom: 10px;
+            display: flex;
+            position: relative;
+            background-color: #fff;
+            padding: 0.75rem;
+            border-radius: 99px;
+            * {
+                z-index: 2;
+            }
+            .logo-tab-item {
+                text-align: center;
+                width: 100%;
+                button {
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                    text-transform: uppercase;
+                    word-spacing: 1px;
+                    color: $common_color;
+                    border: none;
+                    background-color: transparent;
+                    padding: 8px 20px;
+                    font-weight: 500;
+                    margin: 8px 8px;
+                    text-align: center;
+                    border-radius: 25px;
+                    -webkit-border-radius: 25px;
+                    -moz-border-radius: 25px;
+                    -ms-border-radius: 25px;
+                    -o-border-radius: 25px;
+                    transition: all linear .1s;
+                    -webkit-transition: all linear .1s;
+                    -moz-transition: all linear .1s;
+                    -ms-transition: all linear .1s;
+                    -o-transition: all linear .1s;
+                    &:hover {
+                        background-color: $main_color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .content {
+            @include for-phone-only {
+                margin: 15px 0;
+            }
+            .screen {
+                display: block;
+                width: 400px;
+                height: 500px;
+                overflow: hidden;
+                position: relative;
+                border: 1px solid $main_color;
+                border-radius: 1px;
+                margin: 0 auto;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    height: 500px;
+                    transition: 8s all ease;
+                    &:hover {
+                        object-position: bottom;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .logo-all {
+            margin-top: 40px;
+            a {
+                @include all-button;
+                i {
+                    font-size: 18px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

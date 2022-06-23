@@ -1,0 +1,82 @@
+#skills {
+    padding: 100px 0;
+    background-color: $background_color;
+    .container {
+        .about-heading {
+            margin-bottom: 40px;
+            h2 {
+                @include main-heading;
+            }
+            h4 {
+                @include sub-heading;
+            }
+        }
+        .skills-item {
+            .skill-icon {
+                width: 15%;
+                margin-right: 20px;
+                img {
+                    width: 80px;
+                }
+            }
+            .skill-content {
+                margin-top: 5px;
+                width: 90%;
+                .skill-name {
+                    display: flex;
+                    h4 {
+                        font-size: 1.5rem;
+                        color: #072142;
+                        letter-spacing: 0.2em;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                        color: #c0c5ca;
+                        margin-left: 0.8rem;
+                        letter-spacing: 0.2em;
+                        margin-top: -10px;
+                    }
+                }
+                .skill {
+                    .skill-bar {
+                        background: #fff;
+                        border-radius: 10px;
+                        -webkit-box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
+                        box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
+                        margin-top: 15px;
+                        .skill-per {
+                            height: 20px;
+                            border-radius: 8px;
+                            width: 0;
+                            transition: 1s linear;
+                            position: relative;
+                            &::before {
+                                content: attr(per);
+                                position: absolute;
+                                padding: 4px 6px;
+                                background-color: #000;
+                                color: #fff;
+                                font-size: 12px;
+                                border-radius: 4px;
+                                top: -35px;
+                                right: 0;
+                                transform: translateX(50%);
+                            }
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 10px;
+                                height: 10px;
+                                background-color: #000;
+                                border-radius: 2px;
+                                top: -16px;
+                                right: 0;
+                                transform: translateX(50%) rotate(45deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

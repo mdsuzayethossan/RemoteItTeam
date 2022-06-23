@@ -1,0 +1,173 @@
+#logos {
+    padding: 100px 0;
+    .container {
+        .logo-header {
+            margin-bottom: 40px;
+            h2 {
+                @include main-heading;
+            }
+            h4 {
+                @include sub-heading;
+            }
+        }
+        .logo-tab {
+            margin-bottom: 10px;
+            display: flex;
+            position: relative;
+            background-color: #fff;
+            padding: 0.75rem;
+            border-radius: 99px;
+            * {
+                z-index: 2;
+            }
+            .logo-tab-item {
+                text-align: center;
+                width: 100%;
+                button {
+                    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                    text-transform: uppercase;
+                    word-spacing: 1px;
+                    color: $common_color;
+                    border: none;
+                    background-color: transparent;
+                    padding: 8px 20px;
+                    font-weight: 500;
+                    margin: 0 8px;
+                    text-align: center;
+                    border-radius: 25px;
+                    -webkit-border-radius: 25px;
+                    -moz-border-radius: 25px;
+                    -ms-border-radius: 25px;
+                    -o-border-radius: 25px;
+                    transition: all linear .1s;
+                    -webkit-transition: all linear .1s;
+                    -moz-transition: all linear .1s;
+                    -ms-transition: all linear .1s;
+                    -o-transition: all linear .1s;
+                    &:hover {
+                        background-color: $main_color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .logo-all {
+            margin-top: 40px;
+            a {
+                @include all-button;
+                i {
+                    font-size: 18px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .modal-dialog {
+            // max-width: 1320px!important;
+            .modal-content {
+                .modal-header {
+                    background-color: $main_color;
+                    h5 {
+                        text-transform: uppercase;
+                        color: $white;
+                        text-align: center;
+                        width: 100%;
+                    }
+                    button {
+                        border: none;
+                        background-color: transparent;
+                        i {
+                            color: $white;
+                            font-size: 24px;
+                        }
+                    }
+                }
+                .modal-body {
+                    $breakpoint: 480px;
+                    // You also need to change the JS breakpoint.
+                    .swiper-container {
+                        overflow: hidden;
+                        width: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        height: 400px;
+                        @media (min-width: $breakpoint) {
+                            min-height: 320px;
+                        }
+                        &-wrapper {
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+                            @media (min-width: $breakpoint) {
+                                flex-flow: row nowrap;
+                            }
+                            height: 600px;
+                        }
+                    }
+                    .swiper-button {
+                        &-next,
+                        &-prev {
+                            color: #000;
+                        }
+                    }
+                    .swiper-slide {
+                        text-align: center;
+                        background-size: cover;
+                        background-position: center;
+                        /* Center slide text vertically */
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: center;
+                        /* Slide content */
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .gallery-top {
+                        position: relative;
+                        width: 100%;
+                        @media (min-width: $breakpoint) {
+                            margin-right: 10px;
+                        }
+                    }
+                    .gallery-thumbs {
+                        width: 100%;
+                        @media (min-width: $breakpoint) {
+                            width: 20%;
+                            padding: 0;
+                        }
+                        .swiper-wrapper {
+                            flex-direction: row;
+                            @media (min-width: $breakpoint) {
+                                flex-direction: column;
+                            }
+                        }
+                        .swiper-slide {
+                            width: 25%;
+                            flex-flow: row nowrap;
+                            @media (min-width: $breakpoint) {
+                                flex-flow: column nowrap;
+                                width: 100%;
+                            }
+                            opacity: 0.75;
+                            cursor: pointer;
+                        }
+                        .swiper-slide-thumb-active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .logo-item {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// #logos .container .modal-dialog .modal-content .modal-body .gallery-thumbs {
+//     padding: 45px 0;
+// }
